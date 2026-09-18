@@ -492,7 +492,10 @@ void IndividualProgression::checkIPPhasing(Player* player, uint32 newArea)
                 player->CastSpell(player, IPP_PHASE, false);
             }
             break;
-        case AREA_SILVERMOON_CITY:
+        case 3487: // Silvermoon City -- AREA_SILVERMOON_CITY isn't defined anywhere in this
+                   // module (checked: not in its own ProgressionAreas enum, not in core's
+                   // AreaDefines.h either). Confirmed 3487 against the real 3.3.5a client's
+                   // AreaTable.dbc (AreaName_lang == "Silvermoon City").
             if (isBeforeProgression(player, PROGRESSION_TBC_TIER_4))
             {
                 player->CastSpell(player, IPP_PHASE_II, false);

@@ -11,7 +11,8 @@ private:
         Map const *map = sMapMgr->FindMap(mapid, 0);
         uint32 zoneId = map->GetZoneId(0, x, y, z);
         return (zoneId == AREA_AZUREMYST_ISLE || zoneId == AREA_BLOODMYST_ISLE || zoneId == AREA_GHOSTLANDS || zoneId == AREA_EVERSONG_WOODS ||
-                zoneId == AREA_THE_EXODAR || zoneId == AREA_SILVERMOON_CITY || zoneId == AREA_AMMEN_VALE || zoneId == AREA_VEILED_SEA);
+                zoneId == AREA_THE_EXODAR || zoneId == 3487 /* Silvermoon City, see IndividualProgression.cpp's case 3487 comment */ ||
+                zoneId == AREA_AMMEN_VALE || zoneId == AREA_VEILED_SEA);
     }
 
 public:
